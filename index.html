@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rifki store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>RIFKI TOPUP</h1>
+    </header>
+
+    <main>
+      <form id="topupForm">
+        <div class="form-group">
+          <label for="game">Pilih Game:</label>
+          <select id="game" name="game" required>
+            <option value="" disabled selected>-- Pilih Game --</option>
+            <option value="Mobile Legends">Mobile Legends</option>
+            <option value="Free Fire">Free Fire</option>
+            <option value="PUBG Mobile">PUBG Mobile</option>
+            <option value="Valorant">Valorant</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="id">ID Pemain:</label>
+          <input type="text" id="id" name="id" placeholder="Masukkan ID Pemain" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nominal">Nominal Top-Up:</label>
+          <select id="nominal" name="nominal" required>
+            <option value="" disabled selected>-- Pilih Nominal --</option>
+            <option value="10">10 Diamond/Koin</option>
+            <option value="50">50 Diamond/Koin</option>
+            <option value="100">100 Diamond/Koin</option>
+            <option value="500">500 Diamond/Koin</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="payment">Metode Pembayaran:</label>
+          <select id="payment" name="payment" required>
+            <option value="" disabled selected>-- Pilih Pembayaran --</option>
+            <option value="OVO">OVO</option>
+            <option value="GoPay">GoPay</option>
+            <option value="DANA">DANA</option>
+            <option value="Transfer Bank">Transfer Bank</option>
+          </select>
+        </div>
+
+        <button type="submit">Bayar Sekarang</button>
+      </form>
+
+      <div id="confirmation" class="hidden">
+        <h2>Konfirmasi Pembayaran</h2>
+        <p>Terima kasih telah melakukan top-up!</p>
+        <p><strong>Game:</strong> <span id="gameName"></span></p>
+        <p><strong>ID Pemain:</strong> <span id="playerId"></span></p>
+        <p><strong>Nominal:</strong> <span id="topupNominal"></span></p>
+        <p><strong>Pembayaran:</strong> <span id="paymentMethod"></span></p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
